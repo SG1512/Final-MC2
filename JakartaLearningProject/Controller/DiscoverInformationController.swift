@@ -14,6 +14,7 @@ class DiscoverInformationController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var informationLabel: UILabel!
+    @IBOutlet weak var toDoLabel: UILabel!
     @IBAction func locationButton(_ sender: Any) {
         
         var  lattitude = Float()
@@ -47,6 +48,9 @@ class DiscoverInformationController: UIViewController {
         image.image = UIImage(named: data[selectedIndex].image)
         titleLabel.text = data[selectedIndex].title
         informationLabel.text = data[selectedIndex].information
+        toDoLabel.text = data[selectedIndex].todo
+        toDoLabel.sizeToFit()
+        informationLabel.sizeToFit()
         
 
         self.navigationController?.setNavigationBarHidden(false, animated: true)
