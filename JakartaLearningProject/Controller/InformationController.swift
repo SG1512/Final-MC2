@@ -13,7 +13,7 @@ class InformationController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var todoLabel: UILabel!
+    @IBOutlet weak var tipsLabel: UILabel!
     @IBOutlet weak var historyLabel: UILabel!
     
     var data = loadData()
@@ -25,7 +25,7 @@ class InformationController: UIViewController {
 //        print(data[selectedIndex].title)
         image.image = UIImage(named: data[selectedIndex].image)
         titleLabel.text = data[selectedIndex].title
-        todoLabel.text = data[selectedIndex].todo
+        tipsLabel.text = data[selectedIndex].tips
         historyLabel.text = data[selectedIndex].summary
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
